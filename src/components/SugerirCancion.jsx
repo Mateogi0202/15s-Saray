@@ -1,41 +1,59 @@
 import { useState } from "react";
+import { addSong } from "../lib/api";
 
-export default function SugerirCancion() {
+export default function SugerirCancion({ guest }) {
   const [cancion, setCancion] = useState("");
   const [enviada, setEnviada] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (cancion.trim()) {
+    if (!cancion.trim()) return;
+    if (!guest) return;
+    try {
+      await addSong(guest.id, cancion.trim());
       setEnviada(true);
-      setTimeout(() => {
-        setEnviada(false);
-        setCancion("");
-      }, 2000);
+      setCancion("");
+      setError("");
+      setTimeout(() => setEnviada(false), 2000);
+    } catch (err) {
+      setError(err.message || "No se pudo enviar la sugerencia.");
     }
   };
 
   return (
-    <div className="crystal-panel sugerir-panel">
-      <span className="material-symbols-outlined sugerir-icon">music_note</span>
-      <h3 className="section-subtitle">Tus Sugerencias</h3>
-      <p className="sugerir-text">¿Qué canción te gustaría escuchar en la fiesta?</p>
+    <div className="glass-card logistics-card">
+      <span className="glass-card-corner glass-card-corner-tl material-symbols-outlined">
+        auto_awesome
+      </span>
+      <span className="glass-card-corner glass-card-corner-br material-symbols-outlined">
+        auto_awesome
+      </span>
+      <div className="logistics-card-icon">
+        <span className="material-symbols-outlined">library_music</span>
+      </div>
+      <h3 className="logistics-card-label">TUS SUGERENCIAS</h3>
+      <p className="logistics-card-text" style={{ marginBottom: "2.5rem" }}>
+        ¿Qué canción te gustaría escuchar en la fiesta?
+      </p>
       {enviada ? (
-        <p className="sugerir-gracias">¡Gracias por tu sugerencia!</p>
+        <p className="song-thanks">¡Gracias por tu sugerencia!</p>
       ) : (
-        <form className="sugerir-form" onSubmit={handleSubmit}>
+        <form className="song-input-wrap" onSubmit={handleSubmit}>
           <input
+            className="song-input"
             type="text"
-            placeholder="Tu melodía favorita..."
+            placeholder="Nombre de la canción..."
             value={cancion}
             onChange={(e) => setCancion(e.target.value)}
             required
           />
-          <button type="submit" className="btn btn-icon-submit">
-            <span className="material-symbols-outlined">auto_awesome</span>
+          <button type="submit" className="song-submit-btn">
+            <span className="material-symbols-outlined">send</span>
           </button>
         </form>
       )}
+      {error && <p className="admin-login-error">{error}</p>}
     </div>
   );
 }

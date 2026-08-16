@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
-const COLORS = ["#87d7ac", "#e9c176"];
+const COLORS = ["#87d7ac", "#F1DDCF"];
 
 class Vector2D {
   constructor(x, y) {
@@ -135,7 +135,7 @@ class AnimationController {
     if (this.time > this.changeEventTime) {
       const dy = this.cameraZ * this.startDotYOffset / this.viewZoom;
       const position = new Vector3D(0, dy, this.cameraTravelDistance);
-      this.showProjectedDot(position, 2.5, "#e9c176");
+      this.showProjectedDot(position, 2.5, "#F1DDCF");
     }
   }
 
@@ -143,7 +143,7 @@ class AnimationController {
     const ctx = this.ctx;
     if (!ctx || this.done) return;
 
-    ctx.fillStyle = "#101413";
+    ctx.fillStyle = "#18574A";
     ctx.fillRect(0, 0, this.size, this.size);
 
     ctx.save();

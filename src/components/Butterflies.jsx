@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 
 const BF_COUNT = 20;
-const BF_COLORS = ["#e9c176", "#87d7ac", "#ffffff"];
+const BF_COLORS = ["#F1DDCF", "#87d7ac", "#ffffff"];
 
 export default function Butterflies({ active }) {
   const containerRef = useRef(null);

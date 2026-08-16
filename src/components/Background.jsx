@@ -29,7 +29,7 @@ export default function Background({ entered }) {
       el.style.opacity = "0";
 
       const size = 14 + Math.random() * 16;
-      const colors = ["#87d7ac", "#e9c176", "#ffffff", "#a6d0b9"];
+      const colors = ["#87d7ac", "#F1DDCF", "#ffffff", "#a6d0b9"];
       const color = colors[Math.floor(Math.random() * colors.length)];
       el.innerHTML = `<svg width="${size}" height="${size}" viewBox="0 0 40 40" fill="${color}" style="filter:drop-shadow(0 0 6px ${color})"><path d="M20 22c-1.5 0-3-0.5-4.2-1.5C13.5 18.5 10 16 10 12c0-3 2-5 5-5 2 0 3.5 1 5 2.5C16.5 10 18 11 20 11s3.5-1 5-2.5C26.5 7 28 6 30 6c3 0 5 2 5 5 0 4-3.5 6.5-5.8 8.5C23 21.5 21.5 22 20 22z" opacity="0.9"/><path d="M20 22c-1.5 0-3-0.5-4.2-1.5C13.5 18.5 10 16 10 12c0-3 2-5 5-5 2 0 3.5 1 5 2.5C16.5 10 18 11 20 11s3.5-1 5-2.5C26.5 7 28 6 30 6c3 0 5 2 5 5 0 4-3.5 6.5-5.8 8.5C23 21.5 21.5 22 20 22z" transform="scale(-1, 1) translate(-40, 0)" opacity="0.9"/><ellipse cx="20" cy="22" rx="2" ry="4" opacity="0.6"/></svg>`;
 

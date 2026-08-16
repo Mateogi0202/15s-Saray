@@ -1,22 +1,18 @@
 export default function Invitados() {
   return (
-    <div className="crystal-panel invitados-panel">
-      <div className="invitados-decor">
-        <span className="material-symbols-outlined">eco</span>
-      </div>
-      <h2 className="section-title">Invitados de Honor</h2>
-      <div className="invitados-body">
-        <p className="invitados-text">
-          Con mucha gratitud en el corazón, los invitamos a compartir y celebrar este día tan especial.
-        </p>
-        <p className="invitados-text italic">
-          Su presencia es el mejor regalo que podemos recibir en esta nueva etapa de mi vida.
-        </p>
-        <div className="invitados-divider" />
-        <div className="invitados-parents">
-          <span className="invitados-parents-label">MIS PADRES</span>
-          <p className="invitados-parents-names">[Nombre de los padres de Saray]</p>
-        </div>
+    <div className="glass-card invitados-panel">
+      <span className="glass-card-corner glass-card-corner-tl material-symbols-outlined">
+        auto_awesome
+      </span>
+      <span className="glass-card-corner glass-card-corner-br material-symbols-outlined">
+        auto_awesome
+      </span>
+      <span className="invitados-label">INVITADO ESPECIAL</span>
+      <p className="invitados-quote">
+        &ldquo;La felicidad solo es real cuando se comparte con quienes amamos.&rdquo;
+      </p>
+      <div className="invitados-quote-extra">
+        Tu presencia es el regalo más grande que mi corazón anhela en esta noche de sueños.
       </div>
     </div>
   );
