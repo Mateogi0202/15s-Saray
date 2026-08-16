@@ -62,7 +62,7 @@ export default function Hero({ guestName = "Invitado Especial", onEnter }) {
           <ChampagneImage className="hero-name-image" url={SARAY_TEXT_URL} label="Saray" />
 
           <p className="hero-nombre">
-            Te esperamos junto a <strong>{guestName}</strong>
+            Te esperamos <strong>{guestName}</strong>
           </p>
 
           <p className="hero-music-hint">
