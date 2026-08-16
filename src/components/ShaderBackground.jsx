@@ -42,9 +42,9 @@ void main() {
     vec2 p = uv * 2.0 - 1.0;
     p.x *= u_resolution.x / u_resolution.y;
 
-    vec3 deepForest = vec3(0.02, 0.04, 0.03);
-    vec3 emeraldGlow = vec3(0.04, 0.22, 0.16);
-    vec3 royalGold = vec3(0.91, 0.75, 0.46);
+    vec3 deepForest = vec3(0.14, 0.40, 0.33);
+    vec3 emeraldGlow = vec3(0.24, 0.56, 0.47);
+    vec3 royalGold = vec3(0.93, 0.78, 0.50);
 
     float noise1 = snoise(uv * 2.0 + u_time * 0.1);
     float noise2 = snoise(uv * 4.0 - u_time * 0.05);
@@ -55,12 +55,12 @@ void main() {
     vec3 color = mix(deepForest, emeraldGlow, wave * 0.6);
     
     float pulses = pow(abs(snoise(uv * 1.5 + u_time * 0.08)), 3.0);
-    color += emeraldGlow * pulses * 0.5;
+    color += emeraldGlow * pulses * 0.7;
 
-    float goldMist = smoothstep(1.2, 0.0, uv.y + noise1 * 0.2) * 0.15;
+    float goldMist = smoothstep(1.2, 0.0, uv.y + noise1 * 0.2) * 0.2;
     color += royalGold * goldMist;
 
-    float vignette = smoothstep(1.5, 0.5, length(p));
+    float vignette = smoothstep(1.5, 0.9, length(p));
     color *= vignette;
 
     gl_FragColor = vec4(color, 1.0);

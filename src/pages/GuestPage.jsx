@@ -160,10 +160,10 @@ export default function GuestPage() {
 
   return (
     <>
+      <ShaderBackground />
+      <div className="fabric-overlay" />
       {entered && (
         <>
-          <ShaderBackground />
-          <div className="fabric-overlay" />
           <div className="cursor-custom" ref={cursorRef} />
           <Butterflies active={entered} />
         </>

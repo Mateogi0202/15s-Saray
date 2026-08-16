@@ -143,7 +143,7 @@ class AnimationController {
     const ctx = this.ctx;
     if (!ctx || this.done) return;
 
-    ctx.fillStyle = "#18574A";
+    ctx.fillStyle = "#207A68";
     ctx.fillRect(0, 0, this.size, this.size);
 
     ctx.save();

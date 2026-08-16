@@ -8,7 +8,7 @@ html { scroll-behavior: smooth; }
 body {
   font-family: "Source Serif 4", serif;
   font-weight: 400;
-  background: #18574A;
+  background: #207A68;
   color: #F1DDCF;
   overflow-x: hidden;
 }
@@ -107,7 +107,7 @@ body {
   transition: all 0.3s; text-decoration: none;
   display: inline-flex; align-items: center; gap: 0.5rem; border: none;
 }
-.btn-primary { background: #DBBE9F; color: #18574A; }
+.btn-primary { background: #DBBE9F; color: #207A68; }
 .btn-primary:hover { background: #F1DDCF; transform: scale(0.96); }
 .btn-secondary { background: transparent; color: #DBBE9F; border: 1px solid rgba(219,190,159,0.3); }
 .btn-secondary:hover { background: rgba(219,190,159,0.1); }
@@ -121,7 +121,7 @@ body {
 .btn-link .material-symbols-outlined { font-size: 1rem; }
 .btn-full { width: 100%; justify-content: center; }
 .btn-gradient {
-  background: linear-gradient(135deg, #DBBE9F, #F1DDCF); color: #18574A;
+  background: linear-gradient(135deg, #DBBE9F, #F1DDCF); color: #207A68;
   padding: 1.2rem; font-size: 0.75rem; letter-spacing: 0.2em;
   box-shadow: 0 0 15px rgba(241,221,207,0.4);
 }
@@ -169,7 +169,7 @@ body {
 .hero {
   min-height: 100vh; height: 100dvh;
   display: flex; align-items: center; justify-content: center;
-  position: relative; z-index: 20; overflow: hidden; background: #18574A;
+  position: relative; z-index: 20; overflow: hidden; background: transparent;
 }
 .hero-glow-bg {
   position: absolute; inset: 0;
@@ -448,7 +448,7 @@ body {
   justify-content: center; gap: 0.5rem; font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; padding: 1.1rem 2rem;
   border-radius: 9999px; border: none; background: linear-gradient(135deg, #DBBE9F, #F1DDCF);
-  color: #18574A; cursor: pointer; box-shadow: 0 8px 30px rgba(241,221,207,0.35);
+  color: #207A68; cursor: pointer; box-shadow: 0 8px 30px rgba(241,221,207,0.35);
   transition: all 0.3s; position: relative; z-index: 10;
 }
 .rsvp-submit .material-symbols-outlined { font-size: 1.3rem; }
@@ -481,7 +481,7 @@ body {
 .music-toggle {
   position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 100;
   width: 48px; height: 48px; border-radius: 50%;
-  border: 1px solid rgba(219,190,159,0.3); background: rgba(24,87,74,0.8);
+  border: 1px solid rgba(219,190,159,0.3); background: rgba(32,122,104,0.8);
   backdrop-filter: blur(8px); color: #DBBE9F; cursor: pointer;
   display: flex; align-items: center; justify-content: center; transition: all 0.3s;
 }
@@ -489,7 +489,7 @@ body {
 .music-toggle .material-symbols-outlined { font-size: 1.3rem; }
 
 /* ===== CELEBRATION ===== */
-.celebration-page { position: fixed; inset: 0; z-index: 1000; background: #18574A; display: flex; align-items: center; justify-content: center; }
+.celebration-page { position: fixed; inset: 0; z-index: 1000; background: #207A68; display: flex; align-items: center; justify-content: center; }
 .celebration-thankyou { position: fixed; inset: 0; z-index: 10000; display: flex; align-items: center; justify-content: center; animation: thankyou-fadein 0.8s ease-out; }
 @keyframes thankyou-fadein { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
 .celebration-thankyou-inner { text-align: center; max-width: 500px; padding: 3rem 2rem; }
@@ -510,7 +510,7 @@ body {
 }
 
 /* ===== ADMIN / LOGIN / PANEL ===== */
-.admin-center { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; background: #18574A; padding: 2rem 1.25rem; text-align: center; }
+.admin-center { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; background: #207A68; padding: 2rem 1.25rem; text-align: center; }
 .admin-loading-icon { font-size: 3rem; color: #F1DDCF; animation: bounce 2s infinite; }
 .admin-loading-text { font-family: "Plus Jakarta Sans", sans-serif; font-size: 0.7rem; letter-spacing: 0.2em; color: rgba(241,221,207,0.7); }
 
