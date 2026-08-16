@@ -197,12 +197,14 @@ body {
 .hero-crown-logo {
   width: 100%; height: 100%;
 }
-.hero-name-image {
-  width: 100%; max-width: 14rem; aspect-ratio: 512/322;
-  filter: drop-shadow(0 0 15px rgba(241,221,207,0.3)); margin-top: -1.5rem;
+.hero-name-text {
+  font-family: "Playfair Display", serif; font-style: italic; font-weight: 600;
+  color: #F1DDCF; text-align: center; line-height: 1.15;
+  font-size: clamp(2rem, 6.5vw, 3.4rem);
+  max-width: 94%; padding: 0 1rem; margin-top: -1rem;
+  text-shadow: 0 0 18px rgba(241,221,207,0.35);
+  text-wrap: balance;
 }
-.hero-nombre { font-family: "Source Serif 4", serif; font-size: 0.9rem; color: #F1DDCF; font-style: italic; padding: 0 1rem; }
-.hero-nombre strong { color: #F1DDCF; }
 .hero-music-hint { font-family: "Source Serif 4", serif; font-size: 0.75rem; color: rgba(241,221,207,0.7); font-style: italic; }
 .hero-buttons { display: flex; flex-direction: column; align-items: center; gap: 1rem; padding-top: 0.5rem; width: 100%; max-width: 20rem; }
 .hero-btn-image {
@@ -230,7 +232,7 @@ body {
 @media (min-width: 480px) {
   .hero-headline-script { font-size: 2rem; }
   .hero-crown-logo-wrap { width: 8rem; height: 8rem; }
-  .hero-name-image { max-width: 16rem; }
+  .hero-name-text { font-size: clamp(2.3rem, 6.5vw, 3.6rem); }
   .hero-content { gap: 1.5rem; }
   .hero-btn-image { height: 8.5rem; max-width: 19rem; }
   .hero-corner { width: 4.5rem; height: 4.5rem; }
@@ -242,8 +244,8 @@ body {
 @media (min-width: 768px) {
   .hero-content { gap: 1.2rem; }
   .hero-headline-script { font-size: 2.4rem; }
-  .hero-crown-logo-wrap { width: 10rem; height: 10rem; }
-  .hero-name-image { max-width: 20rem; }
+.hero-crown-logo-wrap { width: 10rem; height: 10rem; }
+  .hero-name-text { font-size: clamp(2.6rem, 5vw, 4rem); }
   .hero-buttons { flex-direction: row; justify-content: center; gap: 1.5rem; max-width: none; }
   .hero-btn-image { max-width: 17rem; height: 8rem; }
   .hero-corner { width: 5rem; }
@@ -252,8 +254,8 @@ body {
   .hero-overlay { padding: 1.5rem 2rem; }
   .hero-content { gap: 1.5rem; }
   .hero-headline-script { font-size: 2.8rem; }
-  .hero-crown-logo-wrap { width: 12rem; height: 12rem; }
-  .hero-name-image { max-width: 24rem; }
+.hero-crown-logo-wrap { width: 12rem; height: 12rem; }
+  .hero-name-text { font-size: clamp(3rem, 5vw, 4.6rem); }
   .hero-btn-image { height: 8.5rem; max-width: 18rem; }
   .hero-corner { width: 7rem; }
 }
